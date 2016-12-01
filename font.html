@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{background: black;}
+			span{
+				font-size: 65px;
+				font-weight: bold;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<span id="sp" style="opacity: 0;">这是淡入淡出的文字效果</span>
+		<script type="text/javascript">
+			var i=0;
+			var f=true;
+			function s(){
+				var span=document.getElementById('sp');
+				if(i<1&&f){
+					span.style.opacity=i;
+					i=i+0.01;
+				}else{f=false;}
+				if(i>0&&f==false){
+					i=i-0.01;
+					span.style.opacity=i
+				}else{f=true;}
+			}
+			t=setInterval('s()',50);
+		</script>
+	</body>
+</html>
